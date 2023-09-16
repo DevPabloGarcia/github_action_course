@@ -5,9 +5,7 @@ jobs:
   checkout-and-display:
     runs-on: ubuntu-latest
     steps:
-      - name: Display files before checkout
-        run: ls -la
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      - name: Display files after checkout
-        run: ls -la
+      - name: Say hello with action
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: "Pablo, you are awesome!"
