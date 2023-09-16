@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say hello with action
+        id: greet
         uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: "Pablo, you are awesome!"
+      - name: Echo output
+        run: echo ${{ steps.greet.output }}
