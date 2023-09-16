@@ -1,8 +1,9 @@
 name: Working with Shell
 on: [push]
+
 jobs:
-  working-ubuntu:
-    runs-on: ubuntu-latests
+  checkout-and-display:
+    runs-on: ubuntu-latest
     steps:
       - name: Display working Directore and List files
         run: echo "Hello World!"
