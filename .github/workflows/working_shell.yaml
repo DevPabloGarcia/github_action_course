@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say hello with action
-        uses: actions/hello-world-javascript-action@main
+        uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: "Pablo, you are awesome!"
