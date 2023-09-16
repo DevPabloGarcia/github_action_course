@@ -5,13 +5,5 @@ jobs:
     runs-on: ubuntu-latests
     steps:
       - name: Display working Directore and List files
-        run: |
-          pwd
-          ls -la
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
-      - name: Change Working Directory
-        working-directory: /home/runner
-        run: pwd
+        run: echo "Hello World!"
 
