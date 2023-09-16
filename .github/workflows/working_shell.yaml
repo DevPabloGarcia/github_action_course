@@ -1,6 +1,5 @@
 name: Working with Shell
-on:
-  [push]
+on: [push]
 jobs:
   working-ubuntu:
     runs-on: ubuntu-latests
