@@ -1,10 +1,13 @@
-name: Working with Shell
+name: Checkout and Display
 on: [push]
 
 jobs:
   checkout-and-display:
     runs-on: ubuntu-latest
     steps:
-      - name: Display working Directore and List files
-        run: echo "Hello World!"
-
+      - name: Display files before checkout
+        run: ls -la
+      - name: Checkout repo
+        run: checkout@v3
+      - name: Display files after checkout
+        run: ls -la
