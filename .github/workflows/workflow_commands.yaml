@@ -1,11 +1,12 @@
-name: Workflow Commands
-on: [push]
-
+name: Workflow Depends
+on: 
+  workflow_run:
+    workflows: [First workflow]
+    types: [completed]
 jobs:
-  testing-wf-commands:
+  show-log-when-first-ends:
     runs-on: ubuntu-latest
     steps:
-      - name: Showing error
-        run: echo "::error title=Error title, example-param=Example::Missing semicolon"
-      - name: Showing warning
-        run: echo "::warning title=Warning title, example-param=Example::Missing semicolon"
+      - name: Showing workflow is completed
+        run: echo "Ha terminado el primer workflow!"
+      
