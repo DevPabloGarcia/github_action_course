@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show some logs
-        run: echo "This is my second log with little changes"aa
+      runs: echo "This is my second log with little changes"
