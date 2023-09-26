@@ -8,6 +8,10 @@ jobs:
   show-log-when-first-ends:
     runs-on: ubuntu-latest
     steps:
-      - name: Showing workflow is completed
-        run: echo "Ha terminado el primer workflow!"
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            QAVERIFYANDROID_${{ github.run_number }}
       
