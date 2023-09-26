@@ -1,8 +1,5 @@
 name: Workflow Depends
 on: 
-  pull_request: 
-    types: 
-      - labeled
   workflow_run:
     workflows: [First workflow]
     types: [completed]
