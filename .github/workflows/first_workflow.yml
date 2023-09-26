@@ -1,6 +1,5 @@
 name: First workflow
-on: 
-  workflow_dispatch: 
+on: [push] 
 jobs:
   show-first-log:
     runs-on: ubuntu-latest
