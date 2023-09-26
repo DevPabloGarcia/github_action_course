@@ -1,15 +1,9 @@
 name: First workflow
-on: [push]
-
+on: 
+  workflow_dispatch: 
 jobs:
   show-first-log:
     runs-on: ubuntu-latest
     steps:
       - name: Show some logs
         run: echo "This is my first log"
-
-  show-second-log:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show some logs
-      runs: echo "This is my second log with little changes"
