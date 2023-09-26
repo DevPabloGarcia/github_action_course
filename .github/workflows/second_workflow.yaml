@@ -11,7 +11,6 @@ jobs:
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v3
         with:
-          issue-number: ${{ github.event.pull_request.number }}
           body: |
-            QAVERIFYANDROID_${{ github.run_number }}
+            Hello World!
       
