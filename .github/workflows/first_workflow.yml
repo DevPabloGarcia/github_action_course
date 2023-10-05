@@ -1,5 +1,5 @@
 name: First workflow
-on: ['push']
+on: ['pull_request', 'issues', 'workflow_dispatch']
 jobs:
   show-first-log:
     runs-on: ubuntu-latest
@@ -9,12 +9,8 @@ jobs:
         
   show-github-global:
     runs-on: ubuntu-latest
+    if: |
+      contains(github.event.issue.labels.*.name, "bug")
     steps:
       - name: Show Logs
-        run: echo '${{ toJson(github.event) }}'
-        
-  show-github-event-logs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show Logs
-        run: echo '${{ toJson(github.event) }}'
+        run: echo 'Hello World!'
