@@ -10,7 +10,7 @@ jobs:
   show-github-global:
     runs-on: ubuntu-latest
     if: |
-      contains(github.event.issue.labels.*.name, "bug")
+      contains(github.event.issue.labels.*.name, 'bug')
     steps:
       - name: Show Logs
         run: echo 'Hello World!'
