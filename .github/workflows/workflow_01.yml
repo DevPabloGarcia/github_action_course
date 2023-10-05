@@ -1,0 +1,10 @@
+name: "Workflow 01"
+on: ['pull_request', 'issues', 'workflow_dispatch'] ]
+
+jobs:
+  show_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show log
+        run: |
+          echo "Hello World"
