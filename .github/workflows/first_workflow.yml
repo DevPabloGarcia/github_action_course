@@ -6,6 +6,11 @@ jobs:
     steps:
       - name: Show some logs
         run: echo "This is my first log"
+  show-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Labels
+        run: echo ${{ join(github.event.issue.labels.*.name, ', ') }}
         
   show-github-global:
     runs-on: ubuntu-latest
