@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show Labels
-        run: echo '${{ toJson(github.event.issue) }}'
+        run: |
+          echo '${{ github.event_name }}'
+          echo '${{ github.event }}'
         
   show-github-global:
     runs-on: ubuntu-latest
