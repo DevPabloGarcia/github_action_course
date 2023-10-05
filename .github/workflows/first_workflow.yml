@@ -9,3 +9,15 @@ jobs:
     steps:
       - name: Show some logs
         run: echo "This is my first log"
+        
+  show-github-global:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Logs
+        run: echo '${{ toJson(github.event) }}'
+        
+  show-github-event-logs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Logs
+        run: echo '${{ toJson(github.event) }}'
