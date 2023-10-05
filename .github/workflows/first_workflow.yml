@@ -11,10 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show Logs
-        run: echo '${{ toJson(github) }}'
-        
-  show-github-event-logs:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show Logs
         run: echo '${{ toJson(github.event) }}'
