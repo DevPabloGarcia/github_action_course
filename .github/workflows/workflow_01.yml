@@ -1,4 +1,4 @@
-name: "Workflow 01"
+name: Workflow 01
 on: ['pull_request', 'issues', 'workflow_dispatch'] ]
 
 jobs:
