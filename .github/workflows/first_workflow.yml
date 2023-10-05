@@ -11,8 +11,7 @@ jobs:
     steps:
       - name: Show Labels
         run: |
-          echo '${{ github.event_name }}'
-          echo '${{ github.event }}'
+          echo '${{ toJson(github) }}'
         
   show-github-global:
     runs-on: ubuntu-latest
