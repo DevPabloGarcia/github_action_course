@@ -1,7 +1,5 @@
 name: "First GA"
-on: 
-  push:
-  pull_request:
+on: ["push", "pull_request"]
 
 run-name: "Expressions & Context by ${{ github.triggering_actor}}, event: ${{ github.event_name}} "
 jobs:
