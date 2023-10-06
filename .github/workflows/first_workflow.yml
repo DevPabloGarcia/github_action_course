@@ -11,5 +11,8 @@ jobs:
       - name: Show log
         run: echo "Hello World!"
 
+      - name: Show event
+        run: echo '${{ toJson(github.event) }}'
+
       - name: Show Labels
         run: echo '${{ toJson(github.event.pull_request.labels.*.name) }}'
