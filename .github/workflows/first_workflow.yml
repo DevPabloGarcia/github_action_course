@@ -13,7 +13,7 @@ jobs:
 
       - name: Show event
         env:
-          GITHUB_EVENT: ${{ toJson(github.event.labels) }}
+          GITHUB_EVENT: ${{ toJson(github.event.pull_request.labels) }}
         run: |
           echo "$GITHUB_EVENT"
 
