@@ -1,7 +1,7 @@
 name: "First GA"
-on: ["push", "pull_request"]
+on: ["push"]
 
-run-name: "Expressions, event: ${{ github.event_name}}, action: ${{ github.action_name}} "
+run-name: "Expressions, event: ${{ github.event_name}}, action: ${{ github.event.action}} "
 jobs:
   show_log:
     runs-on: ubuntu-latest
