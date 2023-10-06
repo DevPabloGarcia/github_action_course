@@ -13,9 +13,9 @@ jobs:
 
       - name: Show event
         env:
-          GITHUB_CONTEXT: ${{ toJson(github.event) }}
+          GITHUB_EVENT: ${{ toJson(github.event) }}
         run: |
-          echo "${{ toJson(github.event) }}"
+          echo "$GITHUB_EVENT"
 
       - name: Show Labels
         run: echo '${{ toJson(github.event.pull_request.labels.*.name) }}'
