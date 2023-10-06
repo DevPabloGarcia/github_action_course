@@ -1,6 +1,6 @@
 name: "First GA"
 on: ["push", "issues", "pull_request", "workflow_dispatch"]
-run-name: "Expressions & Context by ${{ github.autor_name }}, event: ${{ github.event_name}}"
+run-name: "Expressions & Context by ${{ github.triggering_actor}}, event: ${{ github.event_name}}"
 jobs:
   show_log:
     runs-on: ubuntu_latest
