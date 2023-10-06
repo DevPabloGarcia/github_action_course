@@ -3,7 +3,7 @@ on: ["push", "issues", "pull_request", "workflow_dispatch"]
 run-name: "Expressions & Context by ${{ github.triggering_actor}}, event: ${{ github.event_name}}"
 jobs:
   show_log:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: Show log
         run: echo "Hello World!"
