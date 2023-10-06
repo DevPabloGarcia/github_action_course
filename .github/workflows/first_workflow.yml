@@ -7,7 +7,5 @@ jobs:
     steps:
       - name: Show log
         run: echo "Hello World!"
-      - name: Show context
-        run: echo '${{ toJson(github) }}''
       - name: Show event
         run: echo '${{ toJson(github.event) }}''
