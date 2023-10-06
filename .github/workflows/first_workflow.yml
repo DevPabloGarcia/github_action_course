@@ -1,12 +1,14 @@
 name: "First GA"
 on: ["push", "pull_request"]
 
-run-name: "Expressions & Context by ${{ github.triggering_actor}}, event: ${{ github.event_name}} "
+run-name: "Expressions, event: ${{ github.event_name}}, action: ${{ github.action}} "
 jobs:
   show_log:
     runs-on: ubuntu-latest
     steps:
       - name: Show log
         run: echo "Hello World!"
+      - name: Show Context
+        run: echo "${{ toJson(github) }}"
       - name: Show event
-        run: echo ${{ toJson(github.event) }}
+        run: echo "${{ toJson(github) }}"
