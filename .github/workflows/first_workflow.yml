@@ -1,5 +1,7 @@
 name: "First GA"
-on: ["push"]
+on: 
+  pull_request:
+  types: [labeled, synchronize]
 
 run-name: "Expressions, event: ${{ github.event_name}}, action: ${{ github.event.action}} "
 jobs:
