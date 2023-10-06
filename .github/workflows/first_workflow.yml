@@ -9,4 +9,4 @@ jobs:
       - name: Show log
         run: echo "Hello World!"
       - name: Show Context
-        run: echo "${{ github.event.pull_request.labels }}"
+        run: echo '${{ toJson(github.event.pull_request.labels.*.name) }}'
