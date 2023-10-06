@@ -1,8 +1,7 @@
 name: "First GA"
 on: 
-  push:
-  issues:
-    types: [labeled]
+  pull_request:
+    types: [labeled, opened, synchronize]
 run-name: "Expressions & Context by ${{ github.triggering_actor}}, event: ${{ github.event_name}}"
 jobs:
   show_log:
