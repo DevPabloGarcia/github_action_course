@@ -1,9 +1,21 @@
 name: "First GA"
-on: ["push", "issues", "workflow_dispatch"]
+on: 
+  pull_request:
+    types: [labeled, synchronize]
 
+run-name: "Expressions, event: ${{ github.event_name}}, action: ${{ github.event.action}} "
 jobs:
   show_log:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name: Show log
         run: echo "Hello World!"
+
+      - name: Show event
+        env:
+          GITHUB_EVENT: ${{ toJson(github.event.pull_request.labels) }}
+        run: |
+          echo "$GITHUB_EVENT"
+
+      - name: Show Labels
+        run: echo '${{ toJson(github.event.pull_request.labels.*.name) }}'
