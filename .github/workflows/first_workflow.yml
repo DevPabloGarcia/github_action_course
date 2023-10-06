@@ -3,7 +3,7 @@ on: ["push", "issues", "workflow_dispatch"]
 
 jobs:
   show_log:
-    runs_on: ubuntu_latest
+    runs-on: ubuntu_latest
     steps:
       - name: Show log
         run: echo "Hello World!"
