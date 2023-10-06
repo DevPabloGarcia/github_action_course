@@ -12,7 +12,7 @@ jobs:
         run: echo "Hello World!"
 
       - name: Show Context
-        run: echo '${{ toJson(github) }}'
+        run: echo '${{ toJson(github.event) }}'
 
       - name: Show Labels
         run: echo '${{ toJson(github.event.pull_request.labels.*.name) }}'
