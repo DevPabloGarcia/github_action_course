@@ -12,3 +12,6 @@ jobs:
         run: echo "${{ toJson(github) }}"
       - name: Show action
         run: echo "${{ toJson(github.event.action) }}"
+      - name: Show Labels
+        run: echo "${{ toJson(github.event.issue.labels) }}"
+
