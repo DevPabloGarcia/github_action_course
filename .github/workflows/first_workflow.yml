@@ -1,9 +1,15 @@
-name: "First GA"
-on: ["push", "issues", "workflow_dispatch"]
+name: First Github Action
+on: [push]
 
 jobs:
-  show_log:
-    runs-on: ubuntu_latest
+  run-shell-commands:
+    runs-on: ubuntu-latest
     steps:
       - name: Show log
         run: echo "Hello World!"
+
+      - name: Multiline Command
+        run: |
+          node -v
+          npm -v
+
