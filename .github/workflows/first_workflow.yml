@@ -24,6 +24,6 @@ jobs:
     needs: run-shell-commands
     steps:
       - name: Echo a string in windows-latest
-        run: Write-Output "Windows String"
+        run: DoNotExists
           
 
